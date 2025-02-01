@@ -51,12 +51,10 @@ education:
   date: Mar. 2016 - Aug. 2021
 
 experience:
-- name: SCI(E) Journal Reviewer
+- name: SCIE Journal Reviewer
   logo: /assets/images/badges/wos.jpg
   courses:
     - name: IEEE Internet of Things Journal
-    - name: IEEE Access
-    - name: Expert Systems
 - name: The Catholic University of Korea
   logo: /assets/images/badges/CUK_logo.png
   position: Lecturer in AI Dept.
