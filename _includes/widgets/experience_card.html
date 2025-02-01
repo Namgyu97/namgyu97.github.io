@@ -50,7 +50,9 @@
                                                 <li class="mb-1">
                                                     <div>
                                                         <span>- {{ course.name }}</span>
+                                                        {% if course.date %}
                                                         <span class="text-muted" style="font-size: 85%;"> ({{ course.date }})</span>
+                                                        {% endif %}
                                                     </div>
                                                 </li>
                                                 {% endfor %}
