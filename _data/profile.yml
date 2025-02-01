@@ -52,6 +52,7 @@ education:
 
 experience:
 - name: SCI(E) Journal Reviewer
+  logo: /assets/images/badges/wos.jpg
   courses:
     - name: IEEE Internet of Things Journal
     - name: IEEE Access
