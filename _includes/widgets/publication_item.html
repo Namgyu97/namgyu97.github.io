@@ -5,12 +5,12 @@
             <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
             <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mt-0 mb-0 small">
-                {{%- if item.percent -%}
-                    {%- if item.conf -%}
-                        <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}-1E90FF" style="margin-right: 8px;">
-                    {%- else -%}
-                        <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" style="margin-right: 8px;">
-                    {%- endif -%}
+                {%- if item.percent -%}
+                {%- if item.conf -%}
+                <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}-1E90FF" style="margin-right: 8px;">
+                {%- else -%}
+                <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" style="margin-right: 8px;">
+                {%- endif -%}
                 {%- endif -%}
                 {{ item.pub_pre }}<i>{{ item.pub }}</i>
                 {%- if item.pub_post -%}
@@ -47,9 +47,9 @@
                 <p class="mt-0 mb-0 small">
                     {%- if item.percent -%}
                     {%- if item.conf -%}
-                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}-1E90FF" alt="Top {{ item.percent }}" style="margin-right: 8px;">
+                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}-1E90FF" style="margin-right: 8px;">
                     {%- else -%}
-                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" alt="Top {{ item.percent }}%" style="margin-right: 8px;">
+                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" style="margin-right: 8px;">
                     {%- endif -%}
                     {%- endif -%}
                     {{ item.pub_pre }}<i>{{ item.pub }}</i>
