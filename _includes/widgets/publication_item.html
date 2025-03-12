@@ -9,7 +9,7 @@
                 {%- if item.conf -%}
                 <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" alt="Top {{ item.percent }}" style="margin-right: 8px;">
                 {%- else -%}
-                <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" alt="Top {{ item.percent }%}" style="margin-right: 8px;">
+                <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" alt="Top {{ item.percent }}%" style="margin-right: 8px;">
                 {%- endif -%}
                 {%- endif -%}
                 {{ item.pub_pre }}<i>{{ item.pub }}</i>
@@ -49,7 +49,7 @@
                     {%- if item.conf -%}
                     <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" alt="Top {{ item.percent }}" style="margin-right: 8px;">
                     {%- else -%}
-                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" alt="Top {{ item.percent }%}" style="margin-right: 8px;">
+                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" alt="Top {{ item.percent }}%" style="margin-right: 8px;">
                     {%- endif -%}
                     {%- endif -%}
                     {{ item.pub_pre }}<i>{{ item.pub }}</i>
