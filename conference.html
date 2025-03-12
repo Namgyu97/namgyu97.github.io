@@ -6,12 +6,12 @@ body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
-{% assign revision_items = site.publications | where_exp: "item", "item.revision == true" | where_exp: "item", "item.percent == nil" %}
-{% assign accepted_items = site.publications | where_exp: "item", "item.accepted == true" | where_exp: "item", "item.percent == nil" %}
+{% assign revision_items = site.publications | where_exp: "item", "item.revision == true" | where_exp: "item", "item.conf == true" %}
+{% assign accepted_items = site.publications | where_exp: "item", "item.accepted == true" | where_exp: "item", "item.conf == true" %}
 {% assign pubs_by_year = site.publications
    | where: "revision", false
    | where: "accepted", false
-   | where_exp: "item", "item.percent == nil" 
+   | where_exp: "item", "item.conf == true"
    | sort: "date"
    | reverse
    | group_by_exp: "item", "item.date | date: '%Y'" %}
