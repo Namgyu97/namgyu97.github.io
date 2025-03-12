@@ -4,6 +4,7 @@ date:           2024-05-15 00:01:00 +0800
 selected:       true
 revision:       false
 accepted:       false
+conf:           false
 pub:            "IEEE Internet of Things Journal"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
