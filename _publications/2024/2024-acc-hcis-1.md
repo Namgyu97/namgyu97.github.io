@@ -4,6 +4,7 @@ date:           2024-11-25 00:01:00 +0800
 selected:       false
 revision:       false
 accepted:       true
+conf:           false
 pub:            "Human-centric Computing and Information Sciences"
 # pub_pre:        "Submitted to "
 pub_post:       'Accepted'
