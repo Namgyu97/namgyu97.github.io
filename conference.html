@@ -6,12 +6,8 @@ body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
-{% assign revision_items = site.publications
-   | where: "percent"
-   | where: "revision", true %}
-{% assign accepted_items = site.publications 
-   | where: "percent"
-   | where: "accepted", true %}
+{% assign revision_items = site.publications | where_exp: "item", "item.revision == true" %}
+{% assign accepted_items = site.publications | where_exp: "item", "item.accepted == true" %}
 {% assign pubs_by_year = site.publications
    | where: "revision", false
    | where: "accepted", false
