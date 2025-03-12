@@ -1,0 +1,56 @@
+---
+layout: default
+title : Journal
+navbar_title: Journal
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+{% assign revision_items = site.publications | where_exp: "item", "item.revision == true" %}
+{% assign accepted_items = site.publications | where_exp: "item", "item.accepted == true" %}
+{% assign pubs_by_year = site.publications
+   | where: "revision", false
+   | where: "accepted", false
+   | sort: "date"
+   | reverse
+   | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+      {% if revision_items and revision_items.size > 0 %}
+      <h5 class="pt-4" id="revision-section">Submit or Revision</h5>
+      <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+          {% for item in revision_items %}
+              {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+          {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if accepted_items and accepted_items.size > 0 %}
+      <h5 class="pt-4" id="accepted-section">Accept or Online Publish</h5>
+      <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+          {% for item in accepted_items %}
+              {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+          {% endfor %}
+      </div>
+      {% endif %}
+      
+      {% for year in pubs_by_year %}
+      {% assign num_papers = year.items | size %}
+      <h5 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h5>
+      <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+          {% for item in year.items %}
+              {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+          {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for year in pubs_by_year %}
+            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
