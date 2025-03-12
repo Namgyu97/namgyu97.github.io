@@ -10,7 +10,7 @@ body_attr: >-
    | where: "revision", true
    | where_exp: "item", "item.conf == false" %}
 {% assign accepted_items = site.publications
-   | where: "item.accepted", true
+   | where: "accepted", true
    | where_exp: "item", "item.conf == false" %}
 {% assign pubs_by_year = site.publications
    | where: "revision", false
