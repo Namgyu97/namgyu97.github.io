@@ -10,11 +10,11 @@
                         <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" 
                          alt="Top {{ item.percent }}" 
                          style="margin-right: 8px;">
-                    {% else %}
+                    {%- else -%}
                         <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
                          alt="Top {{ item.percent }}%" 
                          style="margin-right: 8px;">
-                    {% end if %}
+                    {%- end if -%}
                 {%- endif -%}
                 {{ item.pub_pre }}<i>{{ item.pub }}</i>
                 {%- if item.pub_post -%}
@@ -54,11 +54,11 @@
                             <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" 
                              alt="Top {{ item.percent }}" 
                              style="margin-right: 8px;">
-                        {% else %}
+                        {%- else -%}
                             <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
                              alt="Top {{ item.percent }}%" 
                              style="margin-right: 8px;">
-                        {% end if %}
+                        {%- end if -%}
                     {%- endif -%}
                     {{ item.pub_pre }}<i>{{ item.pub }}</i>
                     {%- if item.pub_post -%}
