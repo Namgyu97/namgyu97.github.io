@@ -7,7 +7,7 @@
             <p class="mt-0 mb-0 small">
                 {%- if item.percent -%}
                     {%- if item.percent == "AI" -%}
-                        <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
+                        <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" 
                          alt="Top {{ item.percent }}" 
                          style="margin-right: 8px;">
                     {% else %}
@@ -15,9 +15,6 @@
                          alt="Top {{ item.percent }}%" 
                          style="margin-right: 8px;">
                     {% end if %}
-
-
-                        
                 {%- endif -%}
                 {{ item.pub_pre }}<i>{{ item.pub }}</i>
                 {%- if item.pub_post -%}
@@ -53,9 +50,15 @@
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
                 <p class="mt-0 mb-0 small">
                     {%- if item.percent -%}
-                    <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
-                         alt="Top {% if item.percent == 'AI' %}{{ item.percent }}{% else %}{{ item.percent }%}{% endif %}" 
-                         style="margin-right: 8px;">
+                        {%- if item.percent == "AI" -%}
+                            <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightblue" 
+                             alt="Top {{ item.percent }}" 
+                             style="margin-right: 8px;">
+                        {% else %}
+                            <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
+                             alt="Top {{ item.percent }}%" 
+                             style="margin-right: 8px;">
+                        {% end if %}
                     {%- endif -%}
                     {{ item.pub_pre }}<i>{{ item.pub }}</i>
                     {%- if item.pub_post -%}
