@@ -11,6 +11,7 @@ body_attr: >-
 {% assign pubs_by_year = site.publications
    | where: "revision", false
    | where: "accepted", false
+   | where: "percent", false
    | sort: "date"
    | reverse
    | group_by_exp: "item", "item.date | date: '%Y'" %}
