@@ -7,7 +7,7 @@
             <p class="mt-0 mb-0 small">
                 {%- if item.percent -%}
                 <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
-                     alt="Top {% if item.percent == 'AI' %}{{ item.percent }}{% else %}{{ item.percent }}%{% endif %}" 
+                     alt="Top {% if item.percent == 'AI' %}{{ item.percent }}{% else %}{{ item.percent }%}{% endif %}" 
                      style="margin-right: 8px;">
                 {%- endif -%}
                 {{ item.pub_pre }}<i>{{ item.pub }}</i>
@@ -45,7 +45,7 @@
                 <p class="mt-0 mb-0 small">
                     {%- if item.percent -%}
                     <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" 
-                         alt="Top {% if item.percent == 'AI' %}{{ item.percent }}{% else %}{{ item.percent }}%{% endif %}" 
+                         alt="Top {% if item.percent == 'AI' %}{{ item.percent }}{% else %}{{ item.percent }%}{% endif %}" 
                          style="margin-right: 8px;">
                     {%- endif -%}
                     {{ item.pub_pre }}<i>{{ item.pub }}</i>
