@@ -12,7 +12,7 @@
                 <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" style="margin-right: 8px;">
                 {%- endif -%}
                 {%- endif -%}
-                {{ item.pub_pre }}<i>{{ item.pub }}</i>
+                {{ item.pub_pre }}<b>{{ item.pub }}</b>
                 {%- if item.pub_post -%}
                 , {{ item.pub_post }}
                 {%- endif -%}
@@ -55,7 +55,7 @@
                     <img src="https://img.shields.io/badge/-Top%20{{ item.percent | url_encode }}%25-brightgreen" style="margin-right: 8px;">
                     {%- endif -%}
                     {%- endif -%}
-                    {{ item.pub_pre }}<i>{{ item.pub }}</i>
+                    {{ item.pub_pre }}<b>{{ item.pub }}</b>
                     {%- if item.pub_post -%}
                     , {{ item.pub_post }}
                     {%- endif -%}
