@@ -20,6 +20,7 @@
                 , {{ item.date | date: "%b %Y" }}
                 {%- endunless -%}
                 {{ item.pub_last }}
+                {{ item.confdate }}
             </p>
             <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
             
@@ -60,6 +61,7 @@
                     , {{ item.date | date: "%b %Y" }}
                     {%- endunless -%}
                     {{ item.pub_last }}
+                    {{ item.confdate }}
                 </p>
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
                 
