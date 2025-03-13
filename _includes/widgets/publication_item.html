@@ -16,7 +16,7 @@
                 {%- if item.pub_post -%}
                 , {{ item.pub_post }}
                 {%- endif -%}
-                {%- unless item.pub_pre or item.pub_post -%}
+                {%- unless item.pub_pre or item.pub_post or item.conf -%}
                 , {{ item.date | date: "%b %Y" }}
                 {%- endunless -%}
                 {{ item.pub_last }}
@@ -57,7 +57,7 @@
                     {%- if item.pub_post -%}
                     , {{ item.pub_post }}
                     {%- endif -%}
-                    {%- unless item.pub_pre or item.pub_post -%}
+                    {%- unless item.pub_pre or item.pub_post or item.conf -%}
                     , {{ item.date | date: "%b %Y" }}
                     {%- endunless -%}
                     {{ item.pub_last }}
