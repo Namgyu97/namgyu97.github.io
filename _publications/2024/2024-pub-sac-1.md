@@ -11,6 +11,7 @@ pub:            "ACM/SIGAPP Symposium on Applied Computing (SAC)"
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024-05"
 percent:        "AI"
+confdate:        "April 8 - April 12, 2024, Avila, Spain
 
 #abstract: >-
 #  We present a lightweight transformer model with shared embeddings between encoders and decoders, designed to enhance efficiency and address expression imbalance in construction safety prediction.
