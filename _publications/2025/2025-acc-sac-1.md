@@ -5,7 +5,7 @@ selected:       true
 revision:       false
 accepted:       false
 conf:           true
-pub:            "ACM/SIGAPP Symposium on Applied Computing (SAC-2025)"
+pub:            "ACM/SIGAPP Symposium on Applied Computing (SAC)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 # pub_post:       'Accepted'
