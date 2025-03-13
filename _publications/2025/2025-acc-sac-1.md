@@ -3,15 +3,16 @@ title:          "An Attention-based Dual Stream Network for Efficient Electricit
 date:           2025-04-21 00:01:00 +0800
 selected:       true
 revision:       false
-accepted:       true
+accepted:       false
 conf:           true
 pub:            "ACM/SIGAPP Symposium on Applied Computing (SAC-2025)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_post:       'Accepted'
+# pub_post:       'Accepted'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024-04"
 percent:        "AI"
+confdate:        "March 31 - April 4, 2024, Catania, Sicily, Italy
 
 #abstract: >-
 #  We present a dual-stream model combining Conv1D with skip connections and modified GRUs, enhanced by Spatial and Soft Attention mechanisms, for electricity price forecasting.
