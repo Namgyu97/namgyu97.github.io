@@ -3,7 +3,7 @@ title:          "Curriculum Guided Self-Supervised Representation Learning of Dy
 date:           2025-12-12 00:01:00 +0800
 selected:       false
 revision:       false
-accepted:       true
+accepted:       false
 conf:           false
 pub:            "Cognitive Computation"
 # pub_pre:        "Submitted to "
@@ -22,6 +22,6 @@ authors:
   - David Camacho
   - Chang Choi
   - O-Joun Lee
-#links:
-#  Paper: https://namgyu97.github.io/publications
+links:
+  Paper: https://doi.org/10.1007/s12559-025-10441-1
 ---
