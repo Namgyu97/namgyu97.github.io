@@ -8,7 +8,7 @@ conf:           false
 pub:            "Cognitive Computation"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_post:       'Accepted'
+# pub_post:       'Accepted'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2025-03"
 percent:        24.4
