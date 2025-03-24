@@ -1,6 +1,6 @@
 ---
 title:          "Curriculum Guided Self-Supervised Representation Learning of Dynamic Heterogeneous Networks"
-date:           2025-12-12 00:01:00 +0800
+date:           2025-03-24 00:01:00 +0800
 selected:       false
 revision:       false
 accepted:       false
