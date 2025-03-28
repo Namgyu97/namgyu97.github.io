@@ -1,14 +1,14 @@
 ---
 title:          "Union-Redefined Prototype Network for Scene Graph Generation"
 date:           2025-03-28 00:01:00 +0800
-selected:       false
+selected:       true
 revision:       false
 accepted:       true
 conf:           false
 pub:            "Expert Systems with Applications"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_post:       'Revision'
+pub_post:       'Accepted'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2025-05"
 percent:        5.2
