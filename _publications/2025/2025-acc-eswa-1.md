@@ -10,7 +10,7 @@ pub:            "Expert Systems with Applications"
 # pub_post:       'Under review.'
 pub_post:       'Accepted'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
-pub_date:       "2025-05"
+pub_date:       "2025-03"
 percent:        5.2
 
 #abstract: >-
