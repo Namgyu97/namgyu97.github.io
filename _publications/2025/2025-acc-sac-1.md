@@ -12,7 +12,7 @@ pub:            "ACM/SIGAPP Symposium on Applied Computing (SAC)"
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024-04"
 percent:        "AI"
-confdate:        "March 31 - April 4, 2025, Catania, Sicily, Italy"
+confdate:        "March 31 - April 4, 2025, Catania, Italy"
 
 #abstract: >-
 #  We present a dual-stream model combining Conv1D with skip connections and modified GRUs, enhanced by Spatial and Soft Attention mechanisms, for electricity price forecasting.
