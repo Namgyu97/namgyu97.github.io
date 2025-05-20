@@ -81,13 +81,19 @@ body {
   margin-bottom: 10px;
 }
 
+.role-note {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 1em;
+}
+
 /* 오른쪽 메인 컨텐츠 */
 .main-content {
   background: #fff;
   padding: 15px;
   border: 1px solid #e9ecef;
 }
-.main-content h3 {
+.main-content h4 {
   font-size: 1.1rem;
   border-bottom: 1px solid #2575fc;
   padding-bottom: 5px;
