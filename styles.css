@@ -47,6 +47,15 @@ body {
   margin-bottom: 20px;
   border: 1px solid #e9ecef;
 }
+
+/* spacing between roles in sidebar-item */
+.sidebar-item { margin-bottom: 16px; }
+.role-item:last-child { margin-bottom: 0; }
+
+/* optional: slightly tighten inner list spacing */
+.sidebar-item > ul { margin-top: 6px; }
+.sidebar-item > ul > li { margin-bottom: 6px; }
+
 /* PC 환경에서 사이드바 고정을 위한 sticky 적용 */
 @media (min-width: 992px) {
   .sidebar {
@@ -197,3 +206,4 @@ footer {
     margin-top: 20px;
   }
 }
+
