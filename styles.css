@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 120px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #f8f9fa;
@@ -206,5 +210,6 @@ footer {
     margin-top: 20px;
   }
 }
+
 
 
