@@ -49,12 +49,12 @@ body {
 }
 
 /* spacing between roles in sidebar-item */
-.sidebar-item { margin-bottom: 16px; }
+.sidebar-item { margin-bottom: 14px; }
 .role-item:last-child { margin-bottom: 0; }
 
 /* optional: slightly tighten inner list spacing */
-.sidebar-item > ul { margin-top: 6px; }
-.sidebar-item > ul > li { margin-bottom: 6px; }
+.sidebar-item > ul { margin-top: 4px; }
+.sidebar-item > ul > li { margin-bottom: 4px; }
 
 /* PC 환경에서 사이드바 고정을 위한 sticky 적용 */
 @media (min-width: 992px) {
@@ -83,7 +83,7 @@ body {
   line-height: 1.4;
 }
 .sidebar .section-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   border-bottom: 1px solid #2575fc;
   padding-bottom: 5px;
   margin-top: 15px;
@@ -206,4 +206,5 @@ footer {
     margin-top: 20px;
   }
 }
+
 
