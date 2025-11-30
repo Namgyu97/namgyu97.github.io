@@ -478,7 +478,36 @@
       </div>
     </div>
   </div>
-
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const featuredTimeline = document.getElementById('featured-timeline');
+      const featuredItems = document.querySelectorAll('[data-featured="true"]');
+      
+      if (featuredItems.length === 0) {
+        document.getElementById('featured').style.display = 'none';
+        return;
+      }
+      
+      featuredItems.forEach(function(item) {
+        const clone = item.cloneNode(true);
+        clone.removeAttribute('data-featured');
+        
+        const label = item.getAttribute('data-featured-label') || 'Featured';
+        
+        const h5 = clone.querySelector('h5');
+        if (h5) {
+          const badge = document.createElement('span');
+          badge.className = 'badge-featured';
+          badge.textContent = label;
+          h5.insertBefore(badge, h5.firstChild);
+        }
+        
+        featuredTimeline.appendChild(clone);
+      });
+    });
+  </script>
+    
   <footer>
     &copy; NamGyu Jung. All rights reserved.
   </footer>
@@ -487,6 +516,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
