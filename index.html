@@ -4,57 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NamGyu Jung, Ph.D. Student</title>
-  <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" />
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- 외부 CSS 파일 링크 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
   
 </head>
 <body>
   <div class="container resume-container">
-    <!-- 네비게이션 바 (고정) -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center">
-          <div class="navbar-text-info">
-            <div class="title">NamGyu Jung, Ph.D. Student</div>
-            <div class="subtitle">Intelligent Information Processing Lab</div>
-          </div>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
-            <li class="nav-item"><a class="nav-link" href="#conference">Conference</a></li>
-            <li class="nav-item"><a class="nav-link" href="#journal">Journal</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <div class="row">
-      <!-- 왼쪽 영역 (사이드바: PC 환경에서 고정됨) -->
       <div class="col-md-4">
         <div class="sidebar">
-          <!-- 사진 -->
-          <img src="profile.jpg" alt="NamGyu Jung" class="profile-img" />
+          
+          <div class="profile-section">
+            <img src="profile.jpg" alt="NamGyu Jung" class="profile-img" />
+            <div class="profile-name">NamGyu Jung</div>
+            <div class="profile-title">Ph.D. Student</div>
+            <div class="profile-univ">Gachon University</div>
+          </div>
 
-          <!-- Profile -->
-          <h2>BIOGRAPHY</h2>
+          <div class="section-title">
+            <i class="fas fa-user-circle"></i> BIOGRAPHY
+          </div>
           <p>
             NamGyu Jung received the B.S. and M.S. degrees in computer engineering
             from Gachon University. Currently pursuing a Ph.D., his research
             focuses on Scene Graph Generation, Video Understanding, Graph Representation.
           </p>
 
-          <!-- Education -->
-          <div class="section-title">EDUCATION</div>
+          <div class="section-title">
+            <i class="fas fa-graduation-cap"></i> EDUCATION
+          </div>
           <ul class="list-unstyled">
             <li class="sidebar-item">
               <strong>Ph.D. Student in Computer Engineering</strong><br>
@@ -76,8 +56,9 @@
             </li>
           </ul>
 
-          <!-- Experience -->
-          <div class="section-title">EXPERIENCE</div>
+          <div class="section-title">
+            <i class="fas fa-briefcase"></i> EXPERIENCE
+          </div>
           <ul class="list-unstyled">
             <li class="sidebar-item">
               <strong>SCIE Journal Reviewer</strong><br>
@@ -85,75 +66,47 @@
                 <li>IEEE Internet of Things Journal</li>
               </ul>
             </li>
-          
             <li class="sidebar-item">
               <strong>Adjunct Lecturer</strong><br>
               <ul>
-                <li>
-                  <strong>Algorithm</strong> - Spring 2024<br>
-                  <em>Catholic University - Dept. of AI</em><br>
-                </li>
-                <li>
-                  <strong>Linear Algebra</strong> - Fall 2023<br>
-                  <em>Catholic University - Dept. of AI</em><br>
-                </li>
-                <li>
-                  <strong>Discrete Math for AI</strong> - Spring 2023<br>
-                  <em>Catholic University - Dept. of AI</em><br>
-                </li>
+                <li><strong>Algorithm</strong> - Spring 2024<br><em>Catholic University - Dept. of AI</em></li>
+                <li><strong>Linear Algebra</strong> - Fall 2023<br><em>Catholic University - Dept. of AI</em></li>
+                <li><strong>Discrete Math for AI</strong> - Spring 2023<br><em>Catholic University - Dept. of AI</em></li>
               </ul>
             </li>
-            
             <li class="sidebar-item">
               <strong>Guest Instructor (Special Course)</strong><br>
               <ul>
-                <li>
-                  <strong>Algorithm</strong> - Summer 2025<br>
-                  <em>Gachon University - Dept. of CE</em><br>
-                </li>
-                <li>
-                  <strong>Deep Learning w/ PyTorch</strong> - Summer 2023<br>
-                  <em>Catholic University - Dept. of AI</em><br>
-                </li>
+                <li><strong>Algorithm</strong> - Summer 2025<br><em>Gachon University - Dept. of CE</em></li>
+                <li><strong>Deep Learning w/ PyTorch</strong> - Summer 2023<br><em>Catholic University - Dept. of AI</em></li>
               </ul>
             </li>
           </ul>
 
-          <!-- Contact -->
-          <div class="section-title">CONTACT</div>
-          <ul class="list-unstyled">
-            <li>
-              <strong>Email:</strong> jng6017@gachon.ac.kr
-            </li>
-            <li><strong>ORCID:</strong> 0000-0001-8740-1760</li>
-            <li>
-              <strong>Google Scholar:</strong>
-              <a href="https://scholar.google.com/citations?user=99U7PSkAAAAJ&hl=ko" class="btn-url">scholar.google.com</a>
-            </li>
-            <li>
-              <strong>Lab:</strong>
-              <a href="http://iiplab.gachon.ac.kr/" class="btn-url">IIP Lab, Gachon University</a>
-            </li>
-          </ul>
+          <div class="section-title">
+            <i class="fas fa-id-badge"></i> CONTACT
+          </div>
+          <div class="contact-list">
+            <a href="mailto:jng6017@gachon.ac.kr" class="contact-btn">
+              <i class="fas fa-envelope"></i> jng6017@gachon.ac.kr
+            </a>
+            <a href="https://orcid.org/0000-0001-8740-1760" target="_blank" class="contact-btn">
+              <i class="fas fa-link"></i> ORCID
+            </a>
+            <a href="https://scholar.google.com/citations?user=99U7PSkAAAAJ&hl=ko" target="_blank" class="contact-btn">
+              <i class="fab fa-google"></i> Google Scholar
+            </a>
+            <a href="http://iiplab.gachon.ac.kr/" target="_blank" class="contact-btn">
+              <i class="fas fa-flask"></i> Intelligent Information Processing Lab
+            </a>
+          </div>
+
         </div>
       </div>
 
-      <!-- 오른쪽 영역 -->
       <div class="col-md-8">
         <div class="main-content">
-           
-          <!-- <div id="featured" class="section">
-            <h3>
-              Highlights
-              <span style="font-size: 0.8rem; color: #555; font-weight: normal; margin-left: 10px;">
-                Selected Highlights
-              </span>
-            </h3>
-            <div class="timeline" id="featured-timeline">
-            </div>
-          </div> -->
           
-          <!-- Project -->
           <div id="project" class="section">
             <h3>PROJECT</h3>
             <ul class="list-unstyled">
@@ -164,9 +117,7 @@
             </ul>
           </div>
 
-          <!-- Conference 섹션 (Top Conference 및 International Conference 포함) -->
           <div id="conference">
-            <!-- Top Conference -->
             <div class="section">
               <h3>
                 TOP CONFERENCE
@@ -240,86 +191,8 @@
                 </div>
               </div>
             </div>
-
-            <!-- International Conference -->
-            <!-- <div class="section">
-              <h3>INTERNATIONAL CONFERENCE</h3>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Vision-Audio based Deepfake Detection according to Multi-modal Learning</h5>
-                    <p>
-                      <u>JunHo Yoon</u>, NamGyu Jung, Chang Choi<br>
-                      ACM Research in Applied Computation (ACM RACS), Nov. 2024
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Necessity of Causal Insights in Dynamic Scene Graphs for Metaverse Game</h5>
-                    <p>
-                      NamGyu Jung, <u>JunHo Yoon</u>, SaeBom Lee, YuRi Lim, Chang Choi<br>
-                      Electronics, Electrical Engineering, Computer Science (EEECS), Jun. 2024
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Few-shot and Multi-biometrics for Management Identification in Energy Industry</h5>
-                    <p>
-                      <u>JunHo Yoon</u>, Sokjoon Lee, Chang Choi<br>
-                      International Conference on Mobile Internet Security (MobiSec), Dec. 2023
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Vulnerability analysis of neural networks for signal classification in energy environments</h5>
-                    <p>
-                      SaeBom Lee, <u>JunHo Yoon</u>, Chang Choi<br>
-                      International Conference on Smart Media and Applications (SMA), Dec. 2023
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>News Category Classification via Multimodal Fusion Method</h5>
-                    <p>
-                      NamGyu Jung, <u>JunHo Yoon</u>, SaeBom Lee, Pankoo Kim, Kiho Lim, Chang Choi<br>
-                      ACM Research in Applied Computation (ACM RACS), Aug. 2023
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Classification of Tourist Activity Pattern Using Electric Vehicle Driving Data</h5>
-                    <p>
-                      <u>JunHo Yoon</u>, Jin-A Choi, Kiho Lim, Chang Choi<br>
-                      International Conference on Next Generation Computing (ICNGC), Nov. 2021
-                    </p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="marker"></div>
-                  <div class="timeline-content">
-                    <h5>Efficient data processing method for edge intelligence based on SVM</h5>
-                    <p>
-                      NamGyu Jung, <u>JunHo Yoon</u>, Kazadi Vially Mutombo, Seungyeon Lee, Jusuk Lee, Chang Choi<br>
-                      ACM Intelligent Computing and its Emerging Applications (ACM ICEA), Dec. 2020
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
+          </div>
             
-          <!-- SCI(E) Publication 섹션 -->
           <div id="journal" class="section">
             <h3>
               SCI(E) PUBLICATION
@@ -329,7 +202,6 @@
                 <strong><sup>‡</sup></strong> Co-author
               </span>
             </h3>
-            <!-- Submit or Revision 타임라인 -->
             <h4>Submit or Revision</h4>
             <div class="timeline">              
               <div class="timeline-item">
@@ -393,11 +265,7 @@
                 </div>
               </div>
             </div>
-            <!-- Accept or Online Publish 타임라인 -->
-            <!-- <h4>Accept or Online Publish</h4>
-            <div class="timeline">
-            </div> -->
-            <!-- 2025 타임라인 -->
+
             <h4>2025</h4>
             <div class="timeline">
               <div class="timeline-item">
@@ -454,7 +322,6 @@
                 </div>
               </div>
             </div>
-            <!-- 2024 타임라인 -->
             <h4>2024</h4>
             <div class="timeline">
               <div class="timeline-item" data-featured="true" data-featured-label="Top Journal">
@@ -473,38 +340,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Award -->
-          <!-- <div class="section">
-            <h3>AWARD</h3>
-            <ul class="list-unstyled">
-              <li><strong>STUDENT AWARD</strong>, ACM RACS</li>
-              <li><strong>EXCELLENT POSTER AWARD</strong>, ICNGC</li>
-            </ul>
-          </div> -->
-
-          <!-- Patent -->
-          <!-- <div class="section">
-            <h3>PATENT</h3>
-            <ul class="list-unstyled">
-              <li>
-                <strong>10-2024-0118292, US19/179,785</strong>, SYSTEM AND METHOD FOR DETECTING ZERO-IDENTITY DISINFORMATION USING MULTI-MODAL INTERACTION IN VIDEO
-              </li>
-              <li>
-                <strong>10-2023-0135547</strong>, SYSTEM AND METHOD FOR ANALYZING MULTIMEDIA THROUGH CO-LEARNING OF VISION AND LANGUAGE INFORMATION
-              </li>
-            </ul>
-          </div> -->
-
-          <!-- Lecture -->
-          <!-- <div class="section">
-            <h3>LECTURE</h3>
-            <ul class="list-unstyled">
-              <li><strong>Algorithm</strong>, Spring 2024</li>
-              <li><strong>Linear Algebra</strong>, Fall 2023</li>
-              <li><strong>Discrete Mathematics for AI</strong>, Spring 2023</li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>
@@ -515,62 +350,37 @@
       const featuredTimeline = document.getElementById('featured-timeline');
       const featuredItems = document.querySelectorAll('[data-featured="true"]');
       
-      if (featuredItems.length === 0) {
+      if (featuredTimeline && featuredItems.length > 0) {
+        featuredItems.forEach(function(item) {
+          const clone = item.cloneNode(true);
+          clone.removeAttribute('data-featured');
+          featuredTimeline.appendChild(clone);
+        });
+      } else if (document.getElementById('featured')) {
         document.getElementById('featured').style.display = 'none';
-        return;
       }
+
+      // 숫자를 아래에서부터 위로 매겨주는 스크립트
+      const sections = ['#conference', '#journal']; 
       
-      featuredItems.forEach(function(item) {
-        const clone = item.cloneNode(true);
-        clone.removeAttribute('data-featured');
-        featuredTimeline.appendChild(clone);
+      sections.forEach(function(selector) {
+        const section = document.querySelector(selector);
+        if (section) {
+          const items = section.querySelectorAll('.timeline-item');
+          let count = items.length; 
+          
+          items.forEach(function(item) {
+            const marker = item.querySelector('.marker');
+            if (marker) {
+              marker.textContent = count; 
+              count--; 
+            }
+          });
+        }
       });
     });
   </script>
     
-  <footer>
-    &copy; NamGyu Jung. All rights reserved.
-  </footer>
-
-  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
