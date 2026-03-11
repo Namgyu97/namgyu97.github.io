@@ -1,82 +1,93 @@
 html {
-  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8f9fa;
+  background: #f8f9fa; /* 좌우 은은한 회색 배경 */
   text-align: justify;
+  margin: 0; 
 }
 
-/* 네비게이션 바가 고정되므로 일반 화면에서는 상단 여백 추가 */
+/* 🌟 위아래 여백을 0으로! 화면에 꽉 차는 세로형 종이 문서 스타일 🌟 */
 .resume-container {
-  margin: 90px auto 20px; /* 고정된 nav bar 높이와 여백 고려 */
+  margin: 0 auto; /* 위아래 여백 완전 제거 */
+  width: 92%; 
   max-width: 1200px;
-}
-
-/* 네비게이션 바 */
-.navbar {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-.navbar-brand {
-  font-weight: 600;
-}
-.navbar-text-info {
-  margin-left: 15px;
-}
-.navbar-text-info .title {
-  font-size: 1rem;
-  font-weight: 500;
-}
-.navbar-text-info .subtitle {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-/* nav-link hover 시 텍스트에 gradient 효과 적용 */
-.navbar-nav .nav-link:hover {
-  background: linear-gradient(45deg, #1e90ff, #00bfff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.3s;
+  min-height: 100vh; /* 화면 높이를 최소한으로 채움 */
+  background: #ffffff; 
+  border-left: 1px solid #e9ecef; /* 좌우 테두리만 남김 */
+  border-right: 1px solid #e9ecef;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0; /* 화면 끝에 닿으므로 둥근 모서리 제거 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
+  padding: 40px 30px; /* 위아래 내부 여백을 넉넉히 줌 */
 }
 
 /* 왼쪽 사이드바 */
 .sidebar {
-  background: #fff;
-  padding: 15px;
+  padding: 0 20px 15px 0; 
   margin-bottom: 20px;
-  border: 1px solid #e9ecef;
 }
 
-/* spacing between roles in sidebar-item */
+/* 오른쪽 메인 컨텐츠 */
+.main-content {
+  padding: 0 0 15px 20px; 
+}
+
+/* 🌟 PC 환경: 스크롤 즉시 1픽셀의 오차도 없이 부드럽게 고정 🌟 */
+@media (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 40px; /* 컨테이너의 상단 내부 여백(40px)과 동일하게 맞춰서 완벽하게 고정! */
+    height: fit-content; 
+  }
+  .main-content {
+    border-left: 1px solid #e9ecef; /* 중앙 회색 선 */
+  }
+}
+
 .sidebar-item { margin-bottom: 14px; }
 .role-item:last-child { margin-bottom: 0; }
-
-/* optional: slightly tighten inner list spacing */
 .sidebar-item > ul { margin-top: 4px; }
 .sidebar-item > ul > li { margin-bottom: 4px; }
 
-/* PC 환경에서 사이드바 고정을 위한 sticky 적용 */
-@media (min-width: 992px) {
-  .sidebar {
-    position: sticky;
-    top: 90px; /* 고정된 네비게이션 바로 아래에서 시작 */
-  }
+/* 프로필 섹션 전체 중앙 정렬 */
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
 }
+
 .profile-img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
+  width: 220px; 
+  height: 293px; 
+  object-fit: cover; 
   object-position: center;
-  border-radius: 50%;
-  border: 3px solid #2575fc;
+  border-radius: 12px; 
+  border: 1px solid #ddd; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
   margin: 0 auto 15px;
   display: block;
 }
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2px;
+}
+.profile-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e90ff; 
+  margin-bottom: 2px;
+}
+.profile-univ {
+  font-size: 0.85rem;
+  color: #777; 
+}
+
 .sidebar h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -86,31 +97,65 @@ body {
   font-size: 0.9rem;
   line-height: 1.4;
 }
+
+/* 제목 영역(아이콘 포함) 스타일 */
 .sidebar .section-title {
-  font-size: 1.3rem;
-  border-bottom: 1px solid #2575fc;
+  font-size: 1.25rem;
+  font-weight: 600; 
+  color: #333; 
+  border-bottom: 1px solid #1e90ff; 
   padding-bottom: 5px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 40px; 
+  margin-bottom: 15px;
 }
 
-.role-note {
-  font-size: 0.8rem;
-  color: #555;
+/* 제목 옆 아이콘 색상 및 간격 */
+.sidebar .section-title i {
+  color: #1e90ff; 
+  margin-right: 8px; 
+  font-size: 1.2rem;
+}
+
+/* 연락처(Contact) 버튼 스타일 */
+.contact-list {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column; 
+  gap: 10px; 
 }
 
-/* 오른쪽 메인 컨텐츠 */
-.main-content {
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #e9ecef;
+.contact-btn {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f5; 
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+.contact-btn i {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  color: #555; 
+  width: 20px; 
+  text-align: center;
+}
+
+.contact-btn:hover {
+  background-color: #e2e6ea; 
+  color: #1e90ff; 
+}
+.contact-btn:hover i {
+  color: #1e90ff; 
+}
+
+/* 메인 컨텐츠 요소 스타일 */
 .main-content h3 {
   font-size: 1.3rem;
-  border-bottom: 1px solid #2575fc;
+  border-bottom: 1px solid #1e90ff;
   padding-bottom: 5px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -126,7 +171,7 @@ body {
 
 /* 공통 버튼 */
 .btn-url {
-  background: linear-gradient(45deg, #1e90ff, #00bfff);
+  background: #1e90ff;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -139,6 +184,7 @@ body {
 .btn-url:hover {
   transform: scale(1.02);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
 
 /* 타임라인 */
@@ -158,36 +204,53 @@ body {
 }
 .timeline-item {
   position: relative;
-  margin-bottom: 15px;
-  padding-left: 35px;
+  margin-bottom: 20px; 
+  padding-left: 35px; 
 }
 .timeline-item:last-child {
   margin-bottom: 0;
 }
+
+/* 숫자 마커 스타일 */
 .timeline-item .marker {
   position: absolute;
-  left: 5px;
-  width: 12px;
-  height: 12px;
+  left: 1px;
+  width: 20px; 
+  height: 20px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #1e90ff, #00bfff);
-  top: 5px;
+  background: #1e90ff; 
+  top: 0px; 
+  
+  display: block; 
+  text-align: center; 
+  line-height: 20px; 
+  
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
 }
+
 .timeline-item .timeline-content {
   background-color: #f8f9fa;
-  padding: 5px 10px;
+  padding: 10px 12px; 
   border-radius: 4px;
   border: 1px solid #e9ecef;
 }
+
+/* 논문 제목, 저자, 저널 사이의 간격 조정 */
 .timeline-item .timeline-content h5 {
   font-size: 0.95rem;
-  margin-bottom: 3px;
+  margin-bottom: 8px; 
   font-weight: 600;
+  line-height: 1.4; 
 }
 .timeline-item .timeline-content p {
   margin: 0;
   font-size: 0.8rem;
-  line-height: 1.2;
+  line-height: 1.6; 
 }
 
 .timeline-item[data-featured="true"] .marker,
@@ -197,7 +260,7 @@ body {
 
 #featured .timeline-item {
   border-left: none !important;
-  background: linear-gradient(to right, rgba(0, 123, 255, 0.15), transparent);
+  background: linear-gradient(to right, rgba(30, 144, 255, 0.15), transparent);
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -206,14 +269,23 @@ body {
   margin-bottom: 25px;
 }
 
+/* 모바일 화면 조정 */
 @media (max-width: 576px) {
   .resume-container {
-    margin: 80px 12px 16px;
+    margin: 0 auto; 
+    width: 100%; /* 모바일에서는 꽉 채우기 */
+    padding: 20px 15px; 
   }
 
   .sidebar,
   .main-content {
-    padding: 12px;
+    padding: 0; 
+  }
+
+  .main-content {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef; 
   }
 
   .sidebar h2,
@@ -241,48 +313,53 @@ body {
   }
 
   .timeline-item {
-    margin-bottom: 12px;
-    padding-left: 26px;
+    margin-bottom: 16px; 
+    padding-left: 28px; 
   }
 
   .timeline-item .marker {
     left: 1px;
-    width: 10px;
-    height: 10px;
-    top: 4px;
+    width: 18px; 
+    height: 18px;
+    top: 2px;
+    font-size: 0.65rem; 
+    line-height: 18px; 
+    text-align: center;
   }
 
   .timeline-item .timeline-content {
-    padding: 6px 8px;
+    padding: 8px 10px;
   }
 
   .timeline-item .timeline-content h5 {
     font-size: 0.85rem;
+    margin-bottom: 6px; 
   }
 
   .timeline-item .timeline-content p {
     font-size: 0.75rem;
-    line-height: 1.3;
+    line-height: 1.5; 
   }
 }
 
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px 10px;
   font-size: 0.8rem;
   color: #6c757d;
+  background-color: #ffffff; /* 하단 꼬리 부분도 하얀색으로 맞춤 */
 }
 
-/* 인쇄 미디어: 네비게이션 바 숨김 및 상단 여백 조정 */
 @media print {
-  .navbar {
-    display: none;
-  }
   .resume-container {
-    margin-top: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none; 
+    border: none;
+  }
+  .contact-btn {
+    border: 1px solid #ddd;
+    background-color: transparent !important;
   }
 }
-
-
-
-
