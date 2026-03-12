@@ -4,47 +4,45 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8f9fa; /* 좌우 은은한 회색 배경 */
+  background: #f8f9fa; 
   text-align: justify;
   margin: 0; 
 }
 
-/* 🌟 위아래 여백을 0으로! 화면에 꽉 차는 세로형 종이 문서 스타일 🌟 */
+/* 위아래 여백을 0으로! 화면에 꽉 차는 세로형 종이 문서 스타일 */
 .resume-container {
-  margin: 0 auto; /* 위아래 여백 완전 제거 */
+  margin: 0 auto; 
   width: 92%; 
   max-width: 1200px;
-  min-height: 100vh; /* 화면 높이를 최소한으로 채움 */
+  min-height: 100vh; 
   background: #ffffff; 
-  border-left: 1px solid #e9ecef; /* 좌우 테두리만 남김 */
+  border-left: 1px solid #e9ecef; 
   border-right: 1px solid #e9ecef;
   border-top: none;
   border-bottom: none;
-  border-radius: 0; /* 화면 끝에 닿으므로 둥근 모서리 제거 */
+  border-radius: 0; 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
-  padding: 40px 30px; /* 위아래 내부 여백을 넉넉히 줌 */
+  padding: 40px 30px; 
 }
 
-/* 왼쪽 사이드바 */
 .sidebar {
   padding: 0 20px 15px 0; 
   margin-bottom: 20px;
 }
 
-/* 오른쪽 메인 컨텐츠 */
 .main-content {
   padding: 0 0 15px 20px; 
 }
 
-/* 🌟 PC 환경: 스크롤 즉시 1픽셀의 오차도 없이 부드럽게 고정 🌟 */
+/* PC 환경 스크롤 고정 */
 @media (min-width: 768px) {
   .sidebar {
     position: sticky;
-    top: 40px; /* 컨테이너의 상단 내부 여백(40px)과 동일하게 맞춰서 완벽하게 고정! */
+    top: 40px; 
     height: fit-content; 
   }
   .main-content {
-    border-left: 1px solid #e9ecef; /* 중앙 회색 선 */
+    border-left: 1px solid #e9ecef; 
   }
 }
 
@@ -109,7 +107,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* 제목 옆 아이콘 색상 및 간격 */
 .sidebar .section-title i {
   color: #1e90ff; 
   margin-right: 8px; 
@@ -152,13 +149,18 @@ body {
   color: #1e90ff; 
 }
 
-/* 메인 컨텐츠 요소 스타일 */
+/* 오른쪽 메인 컨텐츠 제목 스타일 */
 .main-content h3 {
   font-size: 1.3rem;
+  font-weight: 600; 
+  color: #333; 
   border-bottom: 1px solid #1e90ff;
   padding-bottom: 5px;
   margin-top: 15px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap; 
 }
 .main-content h4 {
   font-size: 1.1rem;
@@ -169,25 +171,51 @@ body {
   line-height: 1.4;
 }
 
-/* 공통 버튼 */
-.btn-url {
-  background: #1e90ff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-weight: 500;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
-  font-size: 0.7rem;
-}
-.btn-url:hover {
-  transform: scale(1.02);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  color: #fff;
+/* 🌟 상태 요약 블록 스타일 (세로로 슬림하게 변경!) 🌟 */
+.status-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6fbff; 
+  border-left: 4px solid #007bff; 
+  border-radius: 0 6px 6px 0; 
+  padding: 5px 15px; 
+  margin-top: 25px; 
+  margin-bottom: 15px; 
 }
 
-/* 타임라인 */
+.status-block .status-title {
+  font-size: 0.95rem; 
+  font-weight: 600;
+  color: #004b87; 
+}
+
+.status-block .status-badge {
+  font-size: 0.75rem; 
+  font-weight: 700;
+  color: #007bff;
+  border: 1px solid #007bff; 
+  border-radius: 20px; 
+  padding: 2px 10px; 
+  background-color: #ffffff; 
+}
+
+
+/* 프로젝트 섹션 회색 박스 스타일 */
+#project .list-unstyled li {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+#project .list-unstyled li b {
+  display: inline-block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+/* 타임라인 통합 선 스타일 */
 .timeline {
   position: relative;
   margin: 10px 0;
@@ -202,6 +230,42 @@ body {
   top: 0;
   bottom: 0;
 }
+
+/* 🌟 연도 표시용 뱃지 스타일 (위아래 간격 통일!) 🌟 */
+.timeline-year {
+  position: relative;
+  margin-top: 20px; /* 🔥 위쪽 간격을 20px로 수정해서 아래와 동일하게 맞춤 🔥 */
+  margin-bottom: 20px;
+  padding-left: 35px; 
+}
+.timeline-year:first-child {
+  margin-top: 0;
+}
+.timeline-year span {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e90ff; 
+  background: #f1f6ff; 
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+.timeline-year::before {
+  content: "";
+  position: absolute;
+  left: 7px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #ffffff; 
+  z-index: 2;
+}
+
+
+/* 개별 논문 항목 스타일 */
 .timeline-item {
   position: relative;
   margin-bottom: 20px; 
@@ -211,7 +275,7 @@ body {
   margin-bottom: 0;
 }
 
-/* 숫자 마커 스타일 */
+/* 논문 숫자 마커 스타일 */
 .timeline-item .marker {
   position: absolute;
   left: 1px;
@@ -231,6 +295,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box; 
+  z-index: 2;
 }
 
 .timeline-item .timeline-content {
@@ -240,31 +305,81 @@ body {
   border: 1px solid #e9ecef;
 }
 
-/* 논문 제목, 저자, 저널 사이의 간격 조정 */
-.timeline-item .timeline-content h5 {
+/* 논문 내용 배치 스타일 */
+.pub-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-bottom: 6px; 
+}
+.pub-authors {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.4;
+}
+.pub-title {
   font-size: 0.95rem;
-  margin-bottom: 8px; 
   font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0 !important; 
   line-height: 1.4; 
 }
-.timeline-item .timeline-content p {
-  margin: 0;
+.pub-journal {
+  margin: 0 !important;
   font-size: 0.8rem;
-  line-height: 1.6; 
+  color: #666;
+  line-height: 1.5; 
+}
+
+
+/* DOI 및 Code 버튼 공통 스타일 */
+.btn-url {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #007bff; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  text-decoration: none;
+  font-size: 0.7rem;
+  margin-left: 0;
+  vertical-align: middle;
+}
+.btn-url i {
+  font-size: 0.7rem;
+}
+.btn-url:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Code 버튼 전용 스타일 (GitHub 검은색) */
+.btn-url.btn-code {
+  background-color: #24292e;
+  color: #ffffff;
+}
+.btn-url.btn-code:hover {
+  background-color: #000000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-item[data-featured="true"] .marker,
 #featured .timeline .timeline-item .marker {
   background: #dc3545 !important;
 }
-
 #featured .timeline-item {
   border-left: none !important;
   background: linear-gradient(to right, rgba(30, 144, 255, 0.15), transparent);
   border-radius: 4px;
   margin-bottom: 10px;
 }
-
 .section {
   margin-bottom: 25px;
 }
@@ -273,50 +388,75 @@ body {
 @media (max-width: 576px) {
   .resume-container {
     margin: 0 auto; 
-    width: 100%; /* 모바일에서는 꽉 채우기 */
+    width: 100%; 
     padding: 20px 15px; 
   }
-
-  .sidebar,
-  .main-content {
+  .sidebar, .main-content {
     padding: 0; 
   }
-
   .main-content {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #e9ecef; 
   }
-
-  .sidebar h2,
-  .main-content h3 {
+  .sidebar h2, .main-content h3 {
     font-size: 1.2rem;
   }
-
+  .main-content h3 {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  .main-content h3 span {
+    margin-left: 0 !important; 
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    font-size: 0.75rem !important; 
+    line-height: 1.5;
+  }
   .main-content h4 {
     font-size: 1rem;
   }
-
-  .sidebar p,
-  .sidebar li,
-  .main-content li {
+  .sidebar p, .sidebar li, .main-content li {
     font-size: 0.85rem;
+  }
+  
+  /* 모바일 상태 블록 폰트 크기 및 여백 슬림하게 조정 */
+  .status-block {
+    padding: 4px 10px; 
+  }
+  .status-block .status-title {
+    font-size: 0.85rem;
+  }
+  .status-block .status-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
   }
 
   .timeline {
     margin: 8px 0;
     padding: 4px 0;
   }
-
   .timeline::before {
     left: 6px;
+  }
+  
+  /* 🔥 모바일에서도 위아래 간격 동일하게 통일 🔥 */
+  .timeline-year {
+    margin-top: 16px; 
+    margin-bottom: 16px;
+    padding-left: 28px; 
+  }
+  .timeline-year:first-child {
+    margin-top: 0;
+  }
+  .timeline-year::before {
+    left: 3px; 
   }
 
   .timeline-item {
     margin-bottom: 16px; 
     padding-left: 28px; 
   }
-
   .timeline-item .marker {
     left: 1px;
     width: 18px; 
@@ -326,19 +466,23 @@ body {
     line-height: 18px; 
     text-align: center;
   }
-
   .timeline-item .timeline-content {
     padding: 8px 10px;
   }
-
-  .timeline-item .timeline-content h5 {
-    font-size: 0.85rem;
-    margin-bottom: 6px; 
+  
+  .pub-meta {
+    gap: 6px;
+    margin-bottom: 4px;
   }
-
-  .timeline-item .timeline-content p {
+  .pub-authors {
     font-size: 0.75rem;
-    line-height: 1.5; 
+  }
+  .pub-title {
+    font-size: 0.85rem;
+    margin-bottom: 4px !important;
+  }
+  .pub-journal {
+    font-size: 0.75rem;
   }
 }
 
@@ -347,7 +491,7 @@ footer {
   padding: 20px 10px;
   font-size: 0.8rem;
   color: #6c757d;
-  background-color: #ffffff; /* 하단 꼬리 부분도 하얀색으로 맞춤 */
+  background-color: #ffffff; 
 }
 
 @media print {
