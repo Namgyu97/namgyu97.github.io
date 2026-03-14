@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff; /* 🌟 배경을 새하얀 색으로 변경하여 회색 테두리 완벽 제거! */
   text-align: left;
-  word-break: break-all;
+  word-break: keep-all;
   margin: 0; 
   font-size: 0.85rem; 
 }
