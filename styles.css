@@ -265,4 +265,8 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
   }
   .lang-switcher { display: none !important; }
   body { overflow: visible !important; }
+    .print-contact a { display: block !important; }
+  .print-contact i { display: inline-block; margin-top: 0; margin-right: 6px; vertical-align: middle; }
+  .btn-url { display: inline-block !important; }
+  .btn-url i { margin-right: 3px; }
 }
