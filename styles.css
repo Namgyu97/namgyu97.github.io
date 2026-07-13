@@ -96,9 +96,6 @@ body {
 .timeline-item[data-pubtype="journal"] .marker { background-color: #1e90ff; }
 .timeline-item[data-pubtype="journal"] .marker-type { color: #0d6efd; }
 
-/* 🌟 featured(상위 % 저널)는 마커 배경 대신 빨간 링으로 표시 */
-.timeline-item[data-featured="true"] .marker { box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #dc3545; }
-
 /* 🌟 회색 컨테이너 내부 여백(padding) 통일! (위아래 8px, 좌우 10px) */
 .timeline-item .timeline-content {
   background-color: #f8f9fa;
@@ -111,6 +108,32 @@ body {
 .pub-authors { font-size: 0.75rem; color: #444; line-height: 1.4; }
 .pub-title { font-size: 0.85rem; font-weight: 600; color: #333; margin: 0 0 2px 0 !important; line-height: 1.4; }
 .pub-journal { margin: 0 !important; font-size: 0.75rem; color: #666; line-height: 1.4; }
+
+/* 🌟 중요 논문(IF/JCR 구간)에 밑줄로 포인트 주기 */
+.pub-journal .metric-highlight {
+  font-weight: 700;
+  color: #333;
+  text-decoration: underline;
+  text-decoration-color: #dc3545;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* 🌟 CORE 컨퍼런스 랭킹 뱃지 (예: ICML = CORE A*) */
+.core-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
 
 .btn-url { display: inline-flex; align-items: center; gap: 3px; background: #007bff; color: #fff; border: none; border-radius: 3px; padding: 2px 6px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; font-size: 0.65rem; margin-left: 0; vertical-align: middle; }
 .btn-url i { font-size: 0.65rem; }
