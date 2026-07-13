@@ -77,14 +77,27 @@ body {
 #project .list-unstyled li b { display: inline-block; font-size: 0.85rem; margin-bottom: 2px; }
 
 .timeline { position: relative; margin: 6px 0; padding: 3px 0; }
-.timeline::before { content: ""; position: absolute; left: 9px; width: 1.5px; background-color: #dee2e6; top: 0; bottom: 0; }
-.timeline-year { position: relative; margin-top: 12px; margin-bottom: 12px; padding-left: 28px; }
+.timeline::before { content: ""; position: absolute; left: 12.25px; width: 1.5px; background-color: #dee2e6; top: 0; bottom: 0; }
+.timeline-year { position: relative; margin-top: 12px; margin-bottom: 12px; padding-left: 34px; }
 .timeline-year:first-child { margin-top: 0; }
 .timeline-year span { display: inline-block; font-size: 0.8rem; font-weight: 700; color: #1e90ff; background: #f1f6ff; padding: 2.5px 8px; border-radius: 4px; }
-.timeline-year::before { content: ""; position: absolute; left: 6.5px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; background-color: #1e90ff; border-radius: 50%; box-shadow: 0 0 0 2px #ffffff; z-index: 2; }
-.timeline-item { position: relative; margin-bottom: 12px; padding-left: 28px; }
+.timeline-year::before { content: ""; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; background-color: #1e90ff; border-radius: 50%; box-shadow: 0 0 0 2px #ffffff; z-index: 2; }
+.timeline-item { position: relative; margin-bottom: 12px; padding-left: 34px; }
 .timeline-item:last-child { margin-bottom: 0; }
-.timeline-item .marker { position: absolute; left: 2px; width: 15px; height: 15px; border-radius: 50%; background: #1e90ff; top: 0px; display: block; text-align: center; line-height: 15px; color: white; font-size: 0.6rem; font-weight: 600; padding: 0; margin: 0; box-sizing: border-box; z-index: 2; }
+
+/* 🌟 마커(번호 원) + 타입 텍스트 라벨을 함께 담는 왼쪽 열 */
+.timeline-item .marker-wrap { position: absolute; left: 0; top: 0; width: 26px; text-align: center; z-index: 2; }
+.timeline-item .marker { width: 15px; height: 15px; margin: 0 auto; border-radius: 50%; background: #1e90ff; display: block; text-align: center; line-height: 15px; color: white; font-size: 0.6rem; font-weight: 600; padding: 0; box-sizing: border-box; }
+.timeline-item .marker-type { margin-top: 3px; font-size: 0.53rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1; color: #777; background-color: #ffffff; position: relative; z-index: 2; }
+
+/* 🌟 논문 유형별 마커 색상 (TOP CONF / SCI(E)) */
+.timeline-item[data-pubtype="conf"] .marker { background-color: #e6a100; }
+.timeline-item[data-pubtype="conf"] .marker-type { color: #b3810a; }
+.timeline-item[data-pubtype="journal"] .marker { background-color: #1e90ff; }
+.timeline-item[data-pubtype="journal"] .marker-type { color: #0d6efd; }
+
+/* 🌟 featured(상위 % 저널)는 마커 배경 대신 빨간 링으로 표시 */
+.timeline-item[data-featured="true"] .marker { box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #dc3545; }
 
 /* 🌟 회색 컨테이너 내부 여백(padding) 통일! (위아래 8px, 좌우 10px) */
 .timeline-item .timeline-content {
@@ -105,7 +118,6 @@ body {
 .btn-url.btn-code { background-color: #24292e; color: #ffffff; }
 .btn-url.btn-code:hover { background-color: #000000; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
 
-.timeline-item[data-featured="true"] .marker { background: #dc3545 !important; }
 .section { margin-bottom: 15px; }
 
 .course-badge-container { display: flex; flex-direction: column; gap: 4px; margin-top: 5px; }
@@ -254,8 +266,7 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
   /* 🌟 추가된 부분: 각 메인 섹션들 사이의 간격(Gap) 띄우기 */
   .experience-section, 
   #project, 
-  #conference, 
-  #journal { 
+  #publication { 
     margin-bottom: 25px !important; 
   }
   #project .list-unstyled li,
