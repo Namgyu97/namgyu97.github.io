@@ -2,7 +2,7 @@ html { scroll-behavior: smooth; font-size: 15px; }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #ffffff; /* 🌟 배경을 새하얀 색으로 변경하여 회색 테두리 완벽 제거! */
+  background: #ffffff;
   text-align: justify;
   word-break: keep-all;
   margin: 0; 
@@ -66,12 +66,11 @@ body {
 .status-block .status-title { font-size: 0.85rem; font-weight: 600; color: #004b87; }
 .status-block .status-badge { font-size: 0.65rem; font-weight: 700; color: #007bff; border: 1px solid #007bff; border-radius: 15px; padding: 1px 6px; background-color: #ffffff; }
 
-/* 🌟 회색 컨테이너 내부 여백(padding) 통일! (위아래 8px, 좌우 10px) */
 #project .list-unstyled li {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
   border-radius: 4px; 
-  padding: 8px 10px;   /* 🚨 수정된 부분: 논문 컨테이너와 동일하게 맞춤 */
+  padding: 8px 10px;
   margin-bottom: 10px; 
 }
 #project .list-unstyled li b { display: inline-block; font-size: 0.85rem; margin-bottom: 2px; }
@@ -85,21 +84,18 @@ body {
 .timeline-item { position: relative; margin-bottom: 12px; padding-left: 34px; }
 .timeline-item:last-child { margin-bottom: 0; }
 
-/* 🌟 마커(번호 원) + 타입 텍스트 라벨을 함께 담는 왼쪽 열 */
 .timeline-item .marker-wrap { position: absolute; left: 0; top: 0; width: 26px; text-align: center; z-index: 2; }
 .timeline-item .marker { width: 15px; height: 15px; margin: 0 auto; border-radius: 50%; background: #1e90ff; display: block; text-align: center; line-height: 15px; color: white; font-size: 0.6rem; font-weight: 600; padding: 0; box-sizing: border-box; }
 .timeline-item .marker-type { margin-top: 3px; font-size: 0.53rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1; color: #777; background-color: #ffffff; position: relative; z-index: 2; }
 
-/* 🌟 논문 유형별 마커 색상 (TOP CONF / SCI(E)) */
 .timeline-item[data-pubtype="conf"] .marker { background-color: #e6a100; }
 .timeline-item[data-pubtype="conf"] .marker-type { color: #b3810a; }
 .timeline-item[data-pubtype="journal"] .marker { background-color: #1e90ff; }
 .timeline-item[data-pubtype="journal"] .marker-type { color: #0d6efd; }
 
-/* 🌟 회색 컨테이너 내부 여백(padding) 통일! (위아래 8px, 좌우 10px) */
 .timeline-item .timeline-content {
   background-color: #f8f9fa;
-  padding: 8px 10px;   /* 🚨 수정된 부분: 프로젝트 컨테이너(8px 10px)와 완벽히 맞춤 */
+  padding: 8px 10px;
   border-radius: 3px; 
   border: 1px solid #e9ecef;
 }
@@ -109,7 +105,6 @@ body {
 .pub-title { font-size: 0.85rem; font-weight: 600; color: #333; margin: 0 0 2px 0 !important; line-height: 1.4; }
 .pub-journal { margin: 0 !important; font-size: 0.75rem; color: #666; line-height: 1.4; }
 
-/* 🌟 중요 논문(IF/JCR, BK21 등)에 밑줄로 포인트 주기 */
 .pub-journal .metric-highlight {
   font-weight: 700;
   color: #333;
@@ -119,7 +114,6 @@ body {
   text-underline-offset: 2px;
 }
 
-/* 🌟 CORE 컨퍼런스 랭킹 뱃지 (예: ICML = CORE A*) */
 .core-badge {
   display: inline-flex;
   align-items: center;
@@ -159,19 +153,16 @@ body {
 
 footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757d; background-color: #ffffff; }
 
-/* 🌟 프로젝트 역할 뱃지 */
 .project-role { display: inline-flex; align-items: center; padding: 1px 5px; border-radius: 3px; font-size: 0.65rem; font-weight: 600; margin-right: 0; vertical-align: middle; margin-bottom: 2px; }
 .role-pi { background-color: #e7f1ff; color: #0d6efd; border: 1px solid #b6d4fe; }
 .role-participant { background-color: #f8f9fa; color: #495057; border: 1px solid #ced4da; }
 
-/* 🌟 논문 역할 뱃지 (56px 고정) */
 .role-first { background-color: #e7f1ff; color: #0d6efd; border: 1px solid #b6d4fe; justify-content: center; padding: 1px 2px; }
 .role-corresponding { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; justify-content: center; padding: 1px 2px; }
 .role-co { background-color: #f8f9fa; color: #495057; border: 1px solid #ced4da; justify-content: center; padding: 1px 2px; }
 
-/* 🌟 우측 상단 언어 전환 텍스트 스위처 스타일 */
 .resume-container {
-  position: relative; /* 스위처의 기준점이 되도록 유지 */
+  position: relative;
 }
 
 .lang-switcher {
@@ -181,37 +172,33 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
   z-index: 100;
   display: flex;
   align-items: center;
-  gap: 5px; /* 텍스트 사이의 간격 */
+  gap: 5px;
   font-size: 0.8rem;
-  color: #777; /* 기본 텍스트 색상 */
+  color: #777;
 }
 
 .lang-link {
-  color: #777; /* 링크 색상 */
-  text-decoration: none; /* 밑줄 제거 */
+  color: #777;
+  text-decoration: none;
   transition: color 0.2s ease;
   cursor: pointer;
 }
 
-/* 마우스를 올렸을 때 링크 색상 변경 */
 .lang-link:hover {
   color: #1e90ff;
 }
 
-/* 🌟 현재 페이지 언어 (활성 상태) 스타일 */
 .lang-link.is-active {
-  font-weight: 700; /* 굵게 */
-  color: #1e90ff; /* 파란색 활성 색상 */
-  cursor: default; /* 마우스 커서를 기본으로 */
+  font-weight: 700;
+  color: #1e90ff;
+  cursor: default;
 }
 
-/* 구분선 '|' 스타일 */
 .lang-separator {
   color: #ccc;
   cursor: default;
 }
 
-/* 모바일 화면에서는 여백에 맞게 위치 조정 */
 @media (max-width: 576px) {
   .lang-switcher {
     top: 15px;
@@ -220,7 +207,7 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
 }
 
 /* ============================================== */
-/* 🌟 인쇄(PDF 저장) 시 보여질 전용 레이아웃 */
+/* 인쇄(PDF 저장) 시 보여질 전용 레이아웃 */
 /* ============================================== */
 .print-only-section { display: none; }
 
@@ -228,79 +215,87 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
   html { font-size: 12px !important; }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   .web-only { display: none !important; }
-  .print-only-section { display: block !important; margin-bottom: 20px; }
-  
+  .print-only-section { display: block !important; margin-bottom: 16px; }
+
+  @page { margin: 12mm 14mm; }
+
   .resume-container { width: 100% !important; margin: 0 !important; padding: 0 !important; box-shadow: none !important; border: none !important; }
   .row { display: block !important; margin: 0 !important; }
   .col-md-4, .col-md-8 { width: 100% !important; max-width: 100% !important; flex: none !important; padding: 0 !important; }
   .sidebar, .main-content { position: static !important; border: none !important; padding: 0 !important; width: 100% !important; height: auto !important; margin: 0 !important; }
 
-  .print-header { display: flex; align-items: center; margin-bottom: 25px; }
-  .print-img { width: 100px; height: 130px; object-fit: cover; border-radius: 5px; margin-right: 25px; }
+  /* 양쪽 정렬로 생기는 글자 벌어짐 제거 */
+  .edu-thesis, .edu-univ, .pub-title, .pub-journal, .pub-authors, #project .list-unstyled li { text-align: left; }
+
+  /* ---------- 헤더 : 사진 + 이름 + 연락처 한 줄 ---------- */
+  .print-header { display: flex; align-items: center; margin-bottom: 16px; }
+  .print-img { width: 92px; height: 120px; object-fit: cover; border-radius: 5px; margin-right: 22px; }
   .print-info { text-align: left; }
   .print-name { font-size: 1.8rem; font-weight: 700; margin: 0 0 5px 0; color: #000; }
   .print-title { font-size: 1.1rem; font-weight: 600; color: #007bff; margin: 0 0 5px 0; }
   .print-univ { font-size: 0.9rem; color: #555; margin: 0; }
 
-  .print-3col { 
-    display: flex; 
-    justify-content: space-between; 
-    gap: 20px; /* 여기서 준 20px만큼 선이 끊어져서 보이게 됩니다 */
-    margin-bottom: 25px; 
+  .print-header .print-contact {
+    margin-left: auto;
+    padding-left: 20px;
+    border-left: 1.5px solid #e9ecef;
+    min-width: 210px;
   }
-  .print-col { 
-    flex: 1; 
-    border-bottom: 1.5px solid #007bff; /* 통짜 선 대신 각 칸의 아래에만 선을 긋기 */
+  .print-contact a {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
   }
+  .print-contact a:last-child { margin-bottom: 0; }
+  .print-contact i { color: #1e90ff; width: 14px; text-align: center; margin-right: 6px; display: inline-block; vertical-align: middle; }
+
+  /* ---------- 본문 블록 ---------- */
+  .print-block { margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1.5px solid #007bff; }
   .print-sec-title { font-size: 0.95rem; font-weight: 700; color: #004b87; border-bottom: 1px solid #1e90ff; padding-bottom: 5px; margin-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 6px; }
-  .print-desc { 
-    font-size: 0.8rem; 
-    line-height: 1.5; 
-    color: #333; 
-    margin: 0; 
-    text-align: justify !important; /* 강제 양쪽 정렬 */
-    word-break: keep-all !important; /* 단어 중간에서 찢어지지 않도록 보호 */
-  }
-  
-  /* 🌟 프린트 시 연락처 링크 스타일 (밑줄 제거 및 정렬) */
-  .print-contact a { 
-    font-size: 0.8rem; 
-    margin-bottom: 5px; 
-    display: flex; 
-    align-items: flex-start; /* 두 줄로 넘어가도 아이콘이 위에 예쁘게 고정됨 */
-    gap: 8px; 
-    color: #333; 
-    text-decoration: none; /* 🚨 링크 기본 밑줄 제거 */
-  }
-  
-  .print-contact i { 
-    color: #1e90ff; 
-    width: 14px; 
-    text-align: center; 
-    margin-top: 3px; 
-  }
-  
-  #project .list-unstyled li,
-  .timeline-item .timeline-content { 
-    padding: 6px 10px !important;   /* 위아래 6px, 좌우 10px로 숨통 틔우기 */
-    margin-bottom: 8px !important;  /* 박스들 사이의 간격도 8px로 살짝 늘림 */
+  .print-desc {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    text-align: justify !important;
+    word-break: keep-all !important;
   }
 
-  /* 🌟 추가된 부분: 각 메인 섹션들 사이의 간격(Gap) 띄우기 */
+  /* 학위 3개를 가로로 배치 */
+  .print-edu-grid { display: flex; gap: 20px; align-items: flex-start; }
+  .print-edu-grid > .sidebar-timeline { flex: 1; margin: 0 0 0 6px; }
+
+  /* ---------- EXPERIENCE, AWARD 2단 ---------- */
+  .experience-section { column-count: 2; column-gap: 26px; }
+  .experience-section > div { break-inside: avoid; }
+  .experience-section > .section-title { column-span: all; }
+  .experience-section > .sidebar-timeline { break-inside: avoid; }
+  .sidebar .section-title { margin-top: 14px; }
+
+  /* 강의 뱃지 가로 배열 */
+  .course-badge-container { flex-direction: row; flex-wrap: wrap; gap: 5px; }
+
+  #project .list-unstyled li,
+  .timeline-item .timeline-content { 
+    padding: 6px 10px !important;
+    margin-bottom: 8px !important;
+  }
+
   .experience-section, 
   #project, 
   #publication { 
-    margin-bottom: 25px !important; 
+    margin-bottom: 18px !important; 
   }
   #project .list-unstyled li,
   .timeline-item {
-    page-break-inside: avoid; /* 구형 브라우저 호환용 */
-    break-inside: avoid;      /* 최신 브라우저 표준 */
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
   .lang-switcher { display: none !important; }
   body { overflow: visible !important; }
-    .print-contact a { display: block !important; }
-  .print-contact i { display: inline-block; margin-top: 0; margin-right: 6px; vertical-align: middle; }
   .btn-url { display: inline-block !important; }
   .btn-url i { margin-right: 3px; }
 }
