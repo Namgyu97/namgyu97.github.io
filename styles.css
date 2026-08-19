@@ -142,6 +142,9 @@ body {
 .course-badge .term { background-color: #f1f3f5; color: #007bff; font-weight: 600; padding: 2.5px 8px; border-right: 1px solid #dee2e6; }
 .course-badge .course { background-color: #ffffff; color: #333; padding: 2.5px 10px; }
 
+.award-grid > .sidebar-timeline { margin: 10px 0 12px 8px; }
+.award-grid > .sidebar-timeline:last-child { margin-bottom: 0; }
+
 .journal-badge-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 5px; }
 .journal-badge { display: inline-block; padding: 4px 10px; font-size: 0.75rem; color: #333; background-color: #f1f3f5; border-radius: 15px; font-weight: 500; cursor: default; }
 
@@ -269,10 +272,24 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: #6c757
   .print-edu-grid > .sidebar-timeline { flex: 1; margin: 0 0 0 6px; }
 
   /* ---------- EXPERIENCE, AWARD 2단 ---------- */
-  .experience-section { column-count: 2; column-gap: 26px; }
-  .experience-section > div { break-inside: avoid; }
-  .experience-section > .section-title { column-span: all; }
-  .experience-section > .sidebar-timeline { break-inside: avoid; }
+  .experience-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    align-items: start;
+  }
+  .experience-section > .section-title { grid-column: 1 / -1; }
+  .exp-reviewer { grid-column: 1; grid-row: 2; }
+  .exp-lecturer { grid-column: 1; grid-row: 3; margin-bottom: 0 !important; }
+  .exp-guest    { grid-column: 2; grid-row: 2 / span 2; }
+  .award-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    align-items: start;
+  }
+  .award-grid > .sidebar-timeline { margin: 0 0 0 6px; }
   .sidebar .section-title { margin-top: 14px; }
 
   /* 강의 뱃지 가로 배열 */
