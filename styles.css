@@ -395,3 +395,15 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
 .core-badge i { font-size: 0.62rem; margin-right: 4px; }
 /* 파란색 = 학회 BK21+ 우수학회 표시 (저널 순위는 금색 배지가 담당) */
 .pub-journal .metric-highlight { font-weight: 600; color: var(--accent); }
+
+/* ============================================== */
+/* 넓은 화면: 프로필은 고정 폭, 남는 폭은 모두 논문 영역에 */
+/* ============================================== */
+@media screen and (min-width: 992px) {
+  .resume-container { max-width: 1400px; }
+  .resume-container > .row > .col-md-4 { flex: 0 0 300px; max-width: 300px; }
+  .resume-container > .row > .col-md-8 { flex: 1 1 0; max-width: none; width: auto; }
+}
+@media screen and (min-width: 1200px) {
+  .resume-container > .row > .col-md-4 { flex-basis: 330px; max-width: 330px; }
+}
