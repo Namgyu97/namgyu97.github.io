@@ -310,24 +310,14 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
 }
 
 /* ============================================== */
-/* CV 다운로드 · 업데이트 날짜 */
+/* 업데이트 날짜 */
 /* ============================================== */
-.cv-download {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  margin-top: 10px; padding: 10px 14px;
-  background: var(--accent); color: #fff; border-radius: 10px;
-  font-size: 0.86rem; font-weight: 700;
-  transition: background-color 0.15s;
-}
-.cv-download:hover { background: #184c99; color: #fff; text-decoration: none; }
-.cv-download i { font-size: 0.9rem; }
-
 .site-footer {
   margin-top: 48px; padding-top: 16px;
   border-top: 1px solid var(--line);
   text-align: center; font-size: 0.78rem; color: var(--muted);
 }
-@media print { .cv-download, .site-footer { display: none !important; } }
+@media print { .site-footer { display: none !important; } }
 
 /* ============================================== */
 /* 논문 카드: 제목 우선 배치 */
