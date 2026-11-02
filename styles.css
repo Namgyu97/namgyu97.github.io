@@ -565,3 +565,11 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
   #publication .ov-row-count { justify-self: start; margin-left: 6px; }
   #publication .ov-row .ov-legend { justify-content: flex-start; }
 }
+
+/* 막대 색: 단계 간 명도 차이를 크게 (진남색 → 파랑 → 연파랑, 그 외는 회색) */
+.ov-t5  { background: #0b2557; }
+.ov-t10 { background: #2563cf; }
+.ov-q1  { background: #6797e0; }
+.ov-oth { background: #a8b0bc; }
+.ov-seg::after { left: 0; right: auto; }
+.ov-q1::after, .ov-oth::after { left: auto; right: 0; }
