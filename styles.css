@@ -534,3 +534,34 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
 /* 막대 두께: 진행률 표시줄처럼 보이지 않게 */
 #publication .ov-bar { height: 12px; }
 #publication .ov-row .ov-legend { margin-top: 8px; }
+
+/* 요약 박스 여백 정리: 이름·편수를 막대 높이에 맞추고, 상하·행간 여백을 같게 */
+#publication .ov-panel { padding: 18px 20px; margin: 14px 0 18px; }
+#publication .ov-row { align-items: start; }
+#publication .ov-row-name, #publication .ov-row-count { height: 12px; display: flex; align-items: center; line-height: 1; }
+#publication .ov-row + .ov-row { margin-top: 18px; }
+#publication .ov-row .ov-legend { margin-top: 9px; line-height: 1.3; }
+@media (max-width: 576px) {
+  #publication .ov-row-name, #publication .ov-row-count { height: auto; }
+}
+
+/* 요약 박스 B안: 이름·편수·범례 한 줄 + 전체 폭 막대 */
+#publication .ov-row {
+  display: grid; grid-template-columns: 6.4em auto 1fr;
+  grid-template-areas: "name count legend" "bar bar bar";
+  column-gap: 6px; row-gap: 8px; align-items: center;
+}
+#publication .ov-row-name { grid-area: name; height: auto; }
+#publication .ov-row-count { grid-area: count; height: auto; color: var(--accent); }
+#publication .ov-row-body { display: contents; }
+#publication .ov-bar { grid-area: bar; }
+#publication .ov-row .ov-legend { grid-area: legend; margin: 0; justify-content: flex-end; }
+#publication .ov-row + .ov-row { margin-top: 16px; }
+/* 박스 위·아래 바깥 여백을 같게 */
+#publication .ov-panel { margin: 20px 0 15px; }
+#publication .ov-panel + .status-block { margin-top: 0; }
+@media (max-width: 576px) {
+  #publication .ov-row { grid-template-columns: auto 1fr; grid-template-areas: "name count" "bar bar" "legend legend"; }
+  #publication .ov-row-count { justify-self: start; margin-left: 6px; }
+  #publication .ov-row .ov-legend { justify-content: flex-start; }
+}
