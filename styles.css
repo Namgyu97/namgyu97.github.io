@@ -397,3 +397,140 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
 @media screen and (min-width: 1200px) {
   .resume-container > .row > .col-md-4 { flex-basis: 330px; max-width: 330px; }
 }
+
+/* ============================================== */
+/* Publication overview: 실적 요약 + JCR 순위 분포 */
+/* ============================================== */
+
+.ov-panel {
+  background: linear-gradient(160deg, #eef4fd 0%, #f7faff 100%);
+  border: 1px solid #cfdef4; border-radius: 12px;
+  padding: 18px 22px 18px;
+}
+.ov-stats { display: grid; grid-template-columns: repeat(5, 1fr); }
+.ov-stat { padding: 2px 14px; border-left: 1px solid #d7e3f4; }
+.ov-stat:first-child { border-left: none; padding-left: 0; }
+.ov-num { font-size: 2rem; font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.ov-label { margin-top: 4px; font-size: 0.84rem; font-weight: 700; color: var(--ink); }
+.ov-sub { font-size: 0.74rem; color: var(--muted); }
+
+.ov-bar-wrap { margin-top: 18px; padding-top: 16px; border-top: 1px solid #d7e3f4; }
+.ov-bar-title { font-size: 0.8rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.ov-bar { display: flex; gap: 2px; height: 28px; }
+.ov-seg {
+  position: relative; flex-basis: 0; min-width: 0;
+  display: flex; align-items: center; padding-left: 10px;
+  border-radius: 4px; font-size: 0.78rem; font-weight: 700; outline: none;
+}
+.ov-seg span { white-space: nowrap; }
+.ov-t5  { background: #173f86; color: #fff; }
+.ov-t10 { background: #336ac2; color: #fff; }
+.ov-q1  { background: #5f8cd3; color: #0f1b2d; }
+.ov-q3  { background: #8fb0e3; color: #0f1b2d; }
+/* hover / focus 툴팁 */
+.ov-seg::after {
+  content: attr(data-tip);
+  position: absolute; left: 0; bottom: calc(100% + 8px);
+  background: #1b2330; color: #fff; font-size: 0.74rem; font-weight: 500;
+  padding: 5px 9px; border-radius: 6px; white-space: nowrap;
+  opacity: 0; pointer-events: none; transform: translateY(2px);
+  transition: opacity 0.12s, transform 0.12s; z-index: 5;
+}
+.ov-seg:hover::after, .ov-seg:focus-visible::after { opacity: 1; transform: none; }
+.ov-seg:focus-visible { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent); }
+.ov-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 9px; font-size: 0.76rem; color: var(--body); }
+.ov-key { display: inline-flex; align-items: center; gap: 6px; }
+.ov-sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+@media (max-width: 991px) {
+  .ov-stats { grid-template-columns: repeat(3, 1fr); row-gap: 14px; }
+  .ov-stat:nth-child(4) { border-left: none; padding-left: 0; }
+}
+@media (max-width: 576px) {
+  .ov-panel { padding: 16px; }
+  .ov-stats { grid-template-columns: repeat(2, 1fr); }
+  .ov-stat { border-left: none; padding: 0; }
+  .ov-num { font-size: 1.7rem; }
+}
+/* 오른쪽 구간 툴팁은 오른쪽 끝 기준으로 펼쳐 화면 밖으로 넘치지 않게 */
+.ov-q1::after, .ov-q3::after { left: auto; right: 0; }
+
+/* 실적 요약: 덜 과하게 (패널 배경 제거, 숫자 축소, 얇은 막대) */
+.ov-panel { background: none; border: none; border-radius: 0; padding: 4px 0 0; }
+.ov-stats { grid-template-columns: repeat(4, 1fr); }
+.ov-stat { border-left-color: var(--line); }
+.ov-num { font-size: 1.5rem; font-weight: 700; }
+.ov-label { margin-top: 2px; font-size: 0.8rem; font-weight: 600; }
+.ov-sub { font-size: 0.72rem; }
+.ov-bar-wrap { margin-top: 16px; padding-top: 14px; border-top-color: var(--line); }
+.ov-bar-title { font-size: 0.76rem; font-weight: 600; color: var(--muted); margin-bottom: 7px; }
+.ov-bar { height: 8px; }
+.ov-seg { padding: 0; border-radius: 999px; }
+.ov-seg span { display: none; }
+.ov-legend { margin-top: 8px; color: var(--muted); }
+.ov-key b { font-weight: 700; color: var(--ink); margin-left: 2px; }
+@media (max-width: 991px) {
+  .ov-stats { grid-template-columns: repeat(4, 1fr); }
+  .ov-stat:nth-child(4) { border-left: 1px solid var(--line); padding-left: 14px; }
+}
+@media (max-width: 576px) {
+  .ov-stats { grid-template-columns: repeat(2, 1fr); }
+  .ov-stat, .ov-stat:nth-child(4) { border-left: none; padding: 0; }
+  .ov-num { font-size: 1.4rem; }
+}
+
+/* 실적 요약: 저널·학회 두 줄 분포 */
+.ov-row { display: grid; grid-template-columns: 7.5em 1fr; column-gap: 14px; align-items: start; }
+.ov-row + .ov-row { margin-top: 12px; }
+.ov-row-title { font-size: 0.8rem; font-weight: 700; color: var(--ink); line-height: 8px; padding-top: 0; }
+.ov-row-body { min-width: 0; }
+.ov-row .ov-legend { margin-top: 7px; }
+@media (max-width: 576px) {
+  .ov-row { grid-template-columns: 1fr; row-gap: 8px; }
+  .ov-row-title { line-height: 1.3; }
+}
+/* 학회 막대는 편수 비율(4/8)만큼만: 두 막대 길이로 편수를 비교 */
+@media (max-width: 576px) { .ov-row .ov-bar[style*="width"] { min-width: 50%; } }
+
+/* 실적 요약: 수치 3개(모두 SCI(E) 8편 기준) + 주요 게재지 */
+.ov-stats { grid-template-columns: repeat(3, 1fr); }
+.ov-num small { font-size: 0.95rem; font-weight: 600; color: var(--muted); margin-left: 2px; }
+.ov-venues { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.ov-vt { font-size: 0.78rem; font-weight: 700; color: var(--muted); margin-right: 2px; }
+.ov-v { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--ink); white-space: nowrap; }
+.ov-v b { font-weight: 800; }
+@media (max-width: 991px) {
+  .ov-stats { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 576px) {
+  .ov-stats { grid-template-columns: repeat(3, 1fr); column-gap: 8px; }
+  .ov-num { font-size: 1.3rem; }
+  .ov-vt { flex-basis: 100%; }
+}
+
+/* 실적 요약: 숫자 없이 막대 두 줄만 */
+#publication .ov-bar-wrap { margin-top: 0; padding-top: 6px; border-top: none; }
+
+/* 실적 요약: 이름 · 편수를 각자 열로 세로 가운데 정렬, 편수는 한 세로선에 */
+#publication .ov-row { display: grid; grid-template-columns: 6.2em 4.8em 1fr; column-gap: 12px; align-items: center; }
+#publication .ov-row + .ov-row { margin-top: 14px; }
+.ov-row-name { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+.ov-row-count { font-size: 0.82rem; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+@media (max-width: 576px) {
+  #publication .ov-row { grid-template-columns: auto 1fr; row-gap: 8px; column-gap: 8px; }
+  #publication .ov-row-body { grid-column: 1 / -1; }
+}
+
+/* 실적 요약을 PUBLICATIONS 안 요약 박스로: 아래 논문 카드(흰 카드)와 구분 */
+#publication .ov-panel {
+  background: #f4f7fb; border: none; border-radius: 10px;
+  padding: 16px 20px; margin: 14px 0 22px;
+}
+#publication .ov-bar-wrap { margin: 0; padding: 0; border: none; }
+#publication .ov-row + .ov-row { margin-top: 14px; }
+.ov-seg::after { z-index: 6; }
+@media (max-width: 576px) { #publication .ov-panel { padding: 14px; } }
+
+/* 막대 두께: 진행률 표시줄처럼 보이지 않게 */
+#publication .ov-bar { height: 12px; }
+#publication .ov-row .ov-legend { margin-top: 8px; }
