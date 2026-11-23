@@ -130,9 +130,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
 .timeline-year span { font-size: 0.85rem; font-weight: 700; color: var(--ink); }
 .timeline-year::before { content: ""; position: absolute; left: 10.5px; top: 50%; transform: translateY(-50%); width: 7px; height: 7px; background-color: var(--ink); border-radius: 50%; box-shadow: 0 0 0 3px #fff; z-index: 2; }
 
-.timeline-item { position: relative; margin-bottom: 8px; padding-left: 40px; }
+.timeline-item { position: relative; margin-bottom: 6px; padding-left: 40px; }
 .timeline-item:last-child { margin-bottom: 0; }
-.timeline-item .marker-wrap { position: absolute; left: 0; top: 13px; width: 28px; text-align: center; z-index: 2; background: #fff; padding-bottom: 2px; }
+.timeline-item .marker-wrap { position: absolute; left: 0; top: 9px; width: 28px; text-align: center; z-index: 2; background: #fff; padding-bottom: 2px; }
 .timeline-item .marker { width: 20px; height: 20px; margin: 0 auto; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--accent); display: block; text-align: center; line-height: 17px; color: #fff; font-size: 0.64rem; font-weight: 700; box-sizing: border-box; }
 .timeline-item .marker-type { margin-top: 3px; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1; color: var(--muted); white-space: nowrap; }
 .timeline-item[data-pubtype="conf"] .marker { background: #fff; color: var(--accent); }
@@ -330,7 +330,7 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 14px 18px 13px;
+  padding: 10px 16px;
 }
 .timeline-item .pub-meta { display: contents; }
 
@@ -344,13 +344,13 @@ footer { text-align: center; padding: 10px 5px; font-size: 0.7rem; color: var(--
 .timeline-item .pub-meta:has(.btn-code) .btn-url:not(.btn-code) { margin-left: 10px; }
 
 /* 2행: 제목 / 3행: 저자 / 4행: 게재 정보 */
-.timeline-item .pub-title { order: 4; flex-basis: 100%; margin: 9px 0 3px !important; font-size: 1rem; }
+.timeline-item .pub-title { order: 4; flex-basis: 100%; margin: 5px 0 2px !important; font-size: 0.97rem; }
 .timeline-item .pub-authors { order: 5; font-size: 0.83rem; }
 .timeline-item .pub-note { order: 6; }
-.timeline-item .pub-journal { order: 7; flex-basis: 100%; margin-top: 2px !important; font-size: 0.8rem; }
+.timeline-item .pub-journal { order: 7; flex-basis: 100%; margin-top: 0 !important; font-size: 0.8rem; }
 
 @media (max-width: 576px) {
-  .timeline-item .timeline-content { padding: 12px 14px; }
+  .timeline-item .timeline-content { padding: 9px 13px; }
 }
 @media print {
   .timeline-item .timeline-content { border-color: #e4e8ee; padding: 5px 12px !important; line-height: 1.35; }
